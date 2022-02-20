@@ -16,11 +16,11 @@ public class Numberguess {
 			answer = getUserResponseToGuess(mid);
 			if (mid == 1 && answer == 'l') {
 				System.out.println("You are cheating!");
-                return;
+                                return;
 			}
 			if (mid == 100 && answer == 'h') {
 				System.out.println("You are cheating!");
-                return;
+                                return;
 			}
 			if (answer == 'h') {
 				low = mid + 1;
