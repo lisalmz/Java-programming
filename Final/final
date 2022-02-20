@@ -1,0 +1,23 @@
+public static int sumLargestSmallest(int[] intArray){
+	try{
+		if (intArray == null || intArray.length() == 0) {
+			throw new IllegalStateException("The array parameter is null or the length of the array is 0.");
+		}
+	}
+	catch (Exception excpt) {
+		System.out.println(excpt.getMessage());
+	}
+	int min = intArray[0];
+	int max = intArray[0];
+	for (int i=1; i<intArray.length(); i++){
+		if (intArray[i]>max){
+			max = intArray[i];
+		}
+	}
+	for (int i=1; i<intArray.length(); i++){
+		if (intArray[i]<min){
+			min = intArray[i];
+		}
+	}
+	return min+max;
+}

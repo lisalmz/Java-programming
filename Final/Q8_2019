@@ -1,0 +1,11 @@
+	Q8
+	public static Range encompassingRange(Range[] args) {
+		for (i=0, i<args[].length-2, i++){
+		lower = math.min(args[i].getLowerBound(),args[i+1].getLowerBound());
+		}
+		for (i=1, i<args[].length-2, i++){
+		upper = math.max(args[i].getUpperBound(),args[i+1].getUpperBound());
+		}
+		return(lower, upper);
+	}
+	

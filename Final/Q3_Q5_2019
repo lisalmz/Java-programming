@@ -1,0 +1,11 @@
+Q3
+Created drink with flavor: Mint
+Error creating hot chocolate objects
+
+Q4
+An overriding method in a subclass can invoke one of its superclasses constructor by using the super keyword. The super keyword is a reference variable used to call the parent class's constructors.
+
+Q5
+HotChocolate[] arr = new HotChocolate[2];
+arr[0] = new HotChocolate("Peppermint");
+arr[1] = new HotChocolate("Caramel");

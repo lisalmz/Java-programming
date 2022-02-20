@@ -1,0 +1,32 @@
+Q7
+public class MutableRange implements Range {
+	
+	
+
+	public void setLowerBound(int value){
+		lower = value;
+	}
+
+	public void setUpperBound(int value){
+		upper = value;
+	}
+
+	public int expandToContain(Range r){
+		return Math.max(r.getUpperBound(),upper) - Math.min(r.getLowerBound(),lower);
+	}
+
+	public Range(){
+	lower = 0;
+	upper = 0;
+	}
+
+	public Range(lower, upper){
+	this.lower = super.lower;
+	this.upper = super.upper;
+	}
+
+	public Range(Range r){
+	r.getUpperBound() = upper;
+	r.getLowerBound() = lower;
+	}
+}

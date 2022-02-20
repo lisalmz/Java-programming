@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/Lisa/Documents/CCSF_Java/Java/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2737724152.index
+509298288.index
+387712105.index
+3010710366.index
+2653052473.index
+712676360.index

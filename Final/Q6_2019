@@ -1,0 +1,32 @@
+Q6
+public class Range {
+	public int lower;
+	public int upper;
+
+	public Range(){
+	lower = 0;
+	upper = 0;
+	}
+
+	public Range(lower, upper){
+	this.lower = lower;
+	this.upper = upper;
+	}
+
+	public int getUpperBound(){
+		return upper;
+	};
+
+    public int getLowerBound(){
+    	return lower;
+    };
+
+    public boolean contains(Range r){
+    	return r.getLowerBound() <= lower && r.getUpperBound() >= upper;
+    };
+
+    public boolean equals(Range r){
+    	return r.getLowerBound() == lower && r.getUpperBound() == upper;
+    };
+	
+}

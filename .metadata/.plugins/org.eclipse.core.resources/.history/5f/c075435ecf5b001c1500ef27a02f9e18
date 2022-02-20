@@ -1,0 +1,9 @@
+
+public class Main {
+	public static void main(String[] args)  {
+		RandomNumberGuesser guesser = new RandomNumberGuesser(1, 100);
+		do {
+				playOneGame(guesser);
+		} while (shouldPlayAgain());
+	}
+}

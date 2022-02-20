@@ -1,0 +1,18 @@
+1. List all the examples of polymorphism that you can find. That is to say, statements where the datatype of a reference is not an exact match with the datatype of the object that it refers to.
+	The display() method in GridWriter calls for containsPoint() method. Depending on the objects, containsPoint() could be the method in MyCircle or MyRectangle. This is an example of polymorphism.
+
+2. In the containsPoint method of MyCircle, why are x and y in scope, even though they are not defined as instance variables in MyCircle.java?
+	Because MyCircle inherits GridItem variables x and y, which are decalred as 'protected'. 
+
+
+3. Put a System.out.println statement into each containsPoint method (GridItem, MyCircle, and MyRectangle). Run the program and examine the output. You will notice that GridItem’s containsPoint method is never called. Why is this?
+	Because the GridItem's containsPoint method is overridden in the MyCircle and MyRectangle classes. In addition, GridWriterProgram creates circle objects and rectangle objects. No objects from the base class of GridItem are instantiated.
+
+4. Notice that x and y are declared as ‘protected’ in GridItem. Change this to ‘private’ and recompile. How does the compiler respond?
+	Errors exist in GridWriter. That is because GridWriter can no longer access x and y.
+
+5. How could Abstract Methods have been used to make the code cleaner?
+	We could make the GridItem an abstract class, which includes abstract methods of getArea() and containsPoint(). Both of the methods do not need to be implemented and therefore will make the code cleaner. MyCircle and MyRectangle can both extend GridItem and override the two methods.
+
+6. How might an Interface have been used to structure the classes?
+	We could make the GridItem an Interface that specifies abstract methods of getArea() and containsPoint(). Both of the methods do not need to be implemented and therefore will make the code cleaner. MyCircle and MyRectangle can both implement GridItem.

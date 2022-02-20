@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Array/src"/>
+	<classpathentry kind="src" path="Asterisks again/src"/>
+	<classpathentry kind="src" path="Asterisks/src/main/java"/>
+	<classpathentry kind="src" path="Blackjack/src"/>
+	<classpathentry excluding="CircleCompress/" kind="src" path="Circle/src"/>
+	<classpathentry kind="src" path="Circle/src/CircleCompress"/>
+	<classpathentry kind="src" path="Guesspractice/src"/>
+	<classpathentry excluding="NumberGuesser Compress/" kind="src" path="Number/src"/>
+	<classpathentry kind="src" path="Number/src/NumberGuesser Compress"/>
+	<classpathentry kind="src" path="Numberguess/src"/>
+	<classpathentry kind="src" path="Pokerhand/src"/>
+	<classpathentry kind="output" path="Array/bin"/>
+</classpath>

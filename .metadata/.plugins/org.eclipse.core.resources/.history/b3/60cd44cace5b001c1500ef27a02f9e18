@@ -1,0 +1,7 @@
+
+public class apple extends fruit{
+	public apple(int val) {
+		super.fruit(val);
+	}
+
+}

@@ -1,0 +1,26 @@
+Q4
+
+public class SmartBackpack{
+	private double speed;
+	private Location loc;
+	public SmartBackpack(){
+		speed = 0.0;
+		loc = new Location(0.0, 0.0);
+	}
+	public SmartBackpack(double speed, Location loc){
+		this.loc = new Location(loc);
+		this.speed = speed;
+	}
+	public SmartBackpack(SmartBackpack s){
+		this(s.speed, s.loc);
+	}
+	public double getSpeed(){
+		return speed;
+	}
+	public Location getLocation(){
+		return loc;
+	}
+	public void lockdown(){
+		speed = 0;
+	}
+}

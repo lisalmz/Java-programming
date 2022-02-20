@@ -1,0 +1,4 @@
+
+public class fruit {
+  private int count = 0;
+}

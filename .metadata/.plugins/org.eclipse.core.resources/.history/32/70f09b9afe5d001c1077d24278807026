@@ -1,0 +1,34 @@
+
+public class AlternatingCell extends AbstractCell {
+	boolean IsAlive = false;
+	
+	public AlternatingCell(int r, int c, ConwayWorld w) {
+		super(r, c, w);
+	}
+	
+	public  AbstractCell cellForNextGeneration() {
+		return this;
+	}
+	
+	public boolean willBeAliveInNextGeneration() {
+		if (IsAlive) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+
+	public char displayCharacter() {
+			return IsAlive ? 'A' : '.';
+	}
+	
+	public boolean getIsAlive() {
+		if(IsAlive) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}

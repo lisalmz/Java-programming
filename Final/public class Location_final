@@ -1,0 +1,42 @@
+public class Location {
+  
+   private double latitude, longitude;
+  
+   public Location(double latitude, double longitude) {
+       this.latitude = latitude;
+       this.longitude = longitude;
+      
+       System.out.println("About to check for negative values...");
+
+       if (latitude < 0 || longitude < 0) {
+           throw new IllegalArgumentException("Negative values.");
+       }
+      
+       System.out.println("Looks good.");
+       System.out.println("Called the 2 arg constructor...");     }
+
+   
+   public Location(Location location) {
+       this(location.latitude, location.longitude);
+       System.out.println("Called the 1 arg constructor...");     
+   }
+
+   // Getters and setters here...
+}
+
+
+try {
+   System.out.println("1");
+   Location loc1 = new Location(0.0, 0.0);
+
+   System.out.println("2");
+   Location loc2 = new Location(loc1);
+
+   System.out.println("3");
+   Location loc3 = new Location(-5.0, -5.0);
+
+   System.out.println("4");
+   Location loc4 = new Location(loc3);
+} catch (Exception e) {
+   System.out.println("caught an exception");
+}

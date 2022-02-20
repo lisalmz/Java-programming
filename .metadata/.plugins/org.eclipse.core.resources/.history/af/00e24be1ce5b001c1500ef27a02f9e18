@@ -1,0 +1,10 @@
+
+public class apple extends fruit{
+	private int vol;
+	public apple(int val) {
+		super(val);
+	}
+	
+	public 
+
+}

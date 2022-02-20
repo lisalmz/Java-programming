@@ -1,0 +1,163 @@
+2016 test
+Q1
+A Subclass Does not inherits its Superclass constructor..instead it can call its Superclass Constructor Using keyword "super()". 
+
+Q2
+public static void main(int[] intArray){
+	try{
+		if (intArray == null || intArray.length() == 0) {
+			throw new Exception ("IllegalArgumentException");
+		}
+	}
+	catch (Exception excpt) {
+		System.out.println(excpt.getMessage());
+	}
+	intArray[0] = 0;
+	intArray[intArray.length()-1] = 0;
+}
+
+Q3
+public static double average(MyCircle[] circles){
+	if (circles == null || circle.length() == 0) {
+		return -1;
+	}
+
+	double sum = 0;
+	int count = 0;
+
+	for (int i=0, i<circle.length(), i++){
+		if (circles[i]>0){
+			count=count+1;
+			sum = sum+circles[i]);
+		}
+		if (circles[i]<0){
+			circles[i]=0;
+		}
+	}
+	return sum/count;
+}
+
+Q4
+ClassA aReference: ClassA, ClassB, ClassC
+ClassB bReference: ClassB
+ClassC cReference: ClassC
+
+Q5
+A static method is a method that belongs to a class, but it does not belong to an instance of that class and this method can be called without the instance or object of that class.
+
+A plain old method belongs to the Object of the class, not to the class i.e. they can be called after creating the Object of the class.
+
+Q6
+public class DiceHolder {
+	private int[] v = new int[5];
+
+	public DiceHolder() {
+		for (int i=0; i<5; i++) {
+			v[i] = 0;
+		}
+	}
+
+	public DiceHolder(int value1, int value2, int value3, int value4, int value5) {
+		v[0] = value1;
+		v[1] = value2;
+		v[2] = value3;
+		v[3] = value4;
+		v[4] = value5;
+	}
+
+	public int getValue(int index){
+		return v[index];
+	}
+
+	public void setValue(int index, int value){
+		v[index] = value;
+	}
+
+	public int getTotal(){
+		return v[0]+v[1]+v[2]+v[3]+v[4];
+	}
+}
+
+Q7
+public class AdvanceDiceHolder extends DiceHolder {
+	public AdvanceDiceHolder(int[] values) {
+		super(values[0], values[1], values[2], values[3], values[4]);
+	}
+    
+    public AdvanceDiceHolder(){
+		super();
+	};
+
+	public int[] largestSet() {	
+	    int tmp;
+		for (int i=0; i<4; i++) {
+			for （int j=i+1; j<5; j++) {
+				if (v[i] > v[j]) {
+                	tmp = v[i];
+                	v[i] = v[j];
+                	v[j] = tmp;
+				}
+			}
+		}
+		tmp = v[0];
+		int count = 1;
+		int max_count = 0;
+		for (int i=1; i<6; i++) {
+ 			if (v[i] == v[i-1]) {
+ 				count += 1;
+ 			} else {
+ 				if (count > max_count) {
+ 					max_count = count;
+ 					tmp = v[i-1];
+ 				}
+ 			}
+		}
+
+	}
+}
+
+//member variable, member method, method parameter, constructor (special member method), constructor parameter, static method
+
+Q8
+public class SuperAdvanceDiceHolder extends DiceHolder {
+	public SuperAdvanceDiceHolder(){
+		super();
+	};
+
+
+	public boolean isStraight(){
+		int[] v_c = v.clone();
+		Arrays.sort(v_c);
+		for (int i=0; i<4; i++) {
+			if (v_c[i+1] - v_c[i] != 1) {
+				return false;
+			}
+		}
+		return true;
+	}
+		
+  // returns true if the values form a straight, in no particular order.
+
+	public boolean hasPair(){
+	    int[] v_c = v.clone();
+		Arrays.sort(v_c);
+		for (int i=0; i<4; i++){
+			if (v_c[i+1] == v_c[i]) {
+				return true;
+			}
+		}
+		return false;
+
+	}  // returns true if the there are any duplicate values.  
+
+	public boolean isNotAll1s(){
+		for (int i=0; i<4; i++){
+			if (v[i]>1) {
+				return true;
+			}
+		}
+		return false;
+
+	} // Returns true if there are any values greater than one.
+}
+

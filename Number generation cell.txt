@@ -1,0 +1,3 @@
+Number generation cell:
+
+This is a cell that is alive each generation and will show the number of generation%10.

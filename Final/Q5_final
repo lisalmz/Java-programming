@@ -1,0 +1,23 @@
+Q5
+
+public class JetPack extends SmartBackpack{
+	private double altitude;
+	public JetPack(double speed, Location loc, double altitude){
+		super(speed, loc);
+		this.altitude = altitude;
+	}
+	public JetPack(JetPack jetpack){
+		super(jetpack.speed, jetpack.loc);
+		this.altitude = jetpack.altitude;
+	}
+	public double getAltitude(){
+		return altitude;
+	}
+	public void land(){
+		lockdown();
+		altitude = 0;
+	}
+	public boolean isHigherAndFaster(JetPack jetpack){
+		return speed>jetpack.speed && altitude>jetpack.altitude;
+	}
+}

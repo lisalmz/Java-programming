@@ -1,0 +1,12 @@
+Q6
+
+public static int landUnsafeJetPacks(JetPack[] jetpack, JetPack pacer, double highestSafeAltitude){
+	int count = 0;
+	for (i=0; i<jetpack.length(); i++){
+		if (jetpack[i].isHigherAndFaster(pacer) || (jetpack[i].getAltitude()>highestSafeAltitude)){
+			count++;
+			jetpack[i].land();
+		}
+	}
+	return count;
+}

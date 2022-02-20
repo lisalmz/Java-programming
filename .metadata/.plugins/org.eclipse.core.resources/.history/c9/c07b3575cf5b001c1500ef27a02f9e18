@@ -1,0 +1,10 @@
+
+public class Main {
+	public static void main(String[] args)  {
+		fruit my_fruit = new apple( ); 
+		apple my_pippen = new apple( );
+		do {
+				playOneGame(guesser);
+		} while (shouldPlayAgain());
+	}
+}
